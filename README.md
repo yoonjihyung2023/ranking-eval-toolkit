@@ -20,6 +20,8 @@ Includes practical evaluation utilities for ML portfolio projects.
 ## Quickstart
 ```bash
 python example.py
+Run tests
+pytest -q
 Example output
 AUC: 1.0
 LogLoss: 0.202737
