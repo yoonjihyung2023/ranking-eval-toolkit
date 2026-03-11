@@ -56,3 +56,30 @@ def recall_at_k(y_true, y_score, k):
     top_k = ranked[:k]
     hits = sum(label for _, label in top_k)
     return hits / total_relevant
+
+
+def dcg_at_k(y_true, y_score, k):
+    ranked = sorted(zip(y_score, y_true), key=lambda x: x[0], reverse=True)
+    top_k_labels = [label for _, label in ranked[:k]]
+
+    dcg = 0.0
+    for i, rel in enumerate(top_k_labels, start=1):
+        dcg += rel / math.log2(i + 1)
+    return dcg
+
+
+def ndcg_at_k(y_true, y_score, k):
+    if len(y_true) != len(y_score):
+        raise ValueError("y_true and y_score must have the same length.")
+    if k <= 0:
+        raise ValueError("k must be a positive integer.")
+
+    ideal_labels = sorted(y_true, reverse=True)
+    ideal_dcg = 0.0
+    for i, rel in enumerate(ideal_labels[:k], start=1):
+        ideal_dcg += rel / math.log2(i + 1)
+
+    if ideal_dcg == 0:
+        raise ValueError("NDCG is undefined when there are no positive labels.")
+
+    return dcg_at_k(y_true, y_score, k) / ideal_dcg

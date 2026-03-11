@@ -1,1 +1,1 @@
-﻿from .metrics import auc_score, logloss, precision_at_k, recall_at_k
+﻿from .metrics import auc_score, logloss, precision_at_k, recall_at_k, ndcg_at_k
