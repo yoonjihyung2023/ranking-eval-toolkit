@@ -10,30 +10,46 @@ Includes practical evaluation utilities for ML portfolio projects.
 - Helps compare model outputs consistently
 - Designed as a small portfolio-friendly utility repo
 
-## Planned metrics
+## Currently included
 - AUC
 - LogLoss
-- Precision@K
-- Recall@K
-- NDCG@K
-- MAP
 
-## Why this repo matters
-Model training is not enough.  
+## Quickstart
+```bash
+python example.py
+Example output
+AUC: 1.0
+LogLoss: 0.164252
+Project structure
+ranking_eval/
+  __init__.py
+  metrics.py
+tests/
+  test_metrics.py
+example.py
+Why this repo matters
+
+Model training is not enough.
 Reliable ML work also needs clear, repeatable evaluation.
 
 This repo is meant to show:
-- evaluation mindset
-- ranking metric understanding
-- reusable ML tooling habit
 
-## Project status
-Initial skeleton created.  
-More metric implementations and examples will be added.
+evaluation mindset
 
-## Roadmap
-- [ ] Add metric implementations
-- [ ] Add small example dataset
-- [ ] Add usage example
-- [ ] Add test code
-- [ ] Add benchmark comparison example
+ranking metric understanding
+
+reusable ML tooling habit
+
+Roadmap
+
+ Add Precision@K
+
+ Add Recall@K
+
+ Add NDCG@K
+
+ Add MAP
+
+ Add pytest setup
+
+ Add usage examples
