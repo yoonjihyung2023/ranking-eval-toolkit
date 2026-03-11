@@ -13,13 +13,17 @@ Includes practical evaluation utilities for ML portfolio projects.
 ## Currently included
 - AUC
 - LogLoss
+- Precision@K
+- Recall@K
 
 ## Quickstart
 ```bash
 python example.py
 Example output
 AUC: 1.0
-LogLoss: 0.164252
+LogLoss: 0.202737
+Precision@3: 1.0
+Recall@3: 1.0
 Project structure
 ranking_eval/
   __init__.py
@@ -41,10 +45,6 @@ ranking metric understanding
 reusable ML tooling habit
 
 Roadmap
-
- Add Precision@K
-
- Add Recall@K
 
  Add NDCG@K
 

@@ -28,3 +28,31 @@ def logloss(y_true, y_prob, eps=1e-15):
         total += y * math.log(p) + (1 - y) * math.log(1 - p)
 
     return -total / len(y_true)
+
+
+def precision_at_k(y_true, y_score, k):
+    if len(y_true) != len(y_score):
+        raise ValueError("y_true and y_score must have the same length.")
+    if k <= 0:
+        raise ValueError("k must be a positive integer.")
+
+    ranked = sorted(zip(y_score, y_true), key=lambda x: x[0], reverse=True)
+    top_k = ranked[:k]
+    hits = sum(label for _, label in top_k)
+    return hits / len(top_k)
+
+
+def recall_at_k(y_true, y_score, k):
+    if len(y_true) != len(y_score):
+        raise ValueError("y_true and y_score must have the same length.")
+    if k <= 0:
+        raise ValueError("k must be a positive integer.")
+
+    total_relevant = sum(y_true)
+    if total_relevant == 0:
+        raise ValueError("Recall is undefined when there are no positive labels.")
+
+    ranked = sorted(zip(y_score, y_true), key=lambda x: x[0], reverse=True)
+    top_k = ranked[:k]
+    hits = sum(label for _, label in top_k)
+    return hits / total_relevant
