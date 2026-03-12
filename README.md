@@ -1,55 +1,30 @@
-ranking-eval-toolkit
+﻿# ranking-eval-toolkit
 
-Reusable ranking metrics toolkit for CTR/RecSys experiments
-Metrics: AUC, LogLoss, Precision@K, Recall@K, NDCG@K
-Focus: lightweight, testable, reproducible offline evaluation
+Reusable ranking metrics toolkit for CTR/RecSys experiments  
+Metrics: AUC, LogLoss, Precision@K, Recall@K, NDCG@K  
+Purpose: reproducible offline evaluation for ranking models
 
-One-line
+## Why this repo matters
+- Reusable evaluation utilities for ranking and recommendation experiments
+- Covers both pointwise metrics and top-K ranking metrics
+- Useful for CTR/RecSys offline validation and benchmarking
+- Lightweight portfolio repo that complements model training/serving projects
 
-A small Python toolkit for reusable offline ranking evaluation in CTR and recommendation experiments.
+## Metrics
+- AUC
+- LogLoss
+- Precision@K
+- Recall@K
+- NDCG@K
 
-Why this repo matters
+## Quickstart
+```bash
+python example.py
+pytest -q
+Example use cases
 
-Reusable metric code for ranking / recommendation experiments
+Compare offline ranking quality across multiple models
 
-Lightweight and testable utilities for offline evaluation
+Evaluate CTR/RecSys experiments with a reusable metric toolkit
 
-Covers both classification-style and ranking-style metrics
-
-Useful as a companion repo for CTR / RecSys pipelines
-
-Metrics
-
-AUC
-
-LogLoss
-
-Precision@K
-
-Recall@K
-
-NDCG@K
-
-Intended use
-
-CTR prediction experiments
-
-recommendation ranking experiments
-
-offline model comparison
-
-evaluation utility extraction from larger ML projects
-
-Example direction
-
-from ranking_eval_toolkit import auc, logloss, precision_at_k, recall_at_k, ndcg_at_k
-
-Why it fits this portfolio
-
-This repository widens the story beyond one benchmark:
-
-ctr-seqrec-avazu shows benchmark proof
-
-ctr-api shows serving
-
-ranking-eval-toolkit shows reusable evaluation thinking
+Build cleaner experiment reports for portfolio or interview demos
