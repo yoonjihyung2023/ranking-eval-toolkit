@@ -1,57 +1,55 @@
-﻿# ranking-eval-toolkit
+ranking-eval-toolkit
 
-Lightweight ranking evaluation toolkit for CTR/RecSys experiments.  
-Focus: reproducible offline metrics for ranking models.  
-Includes practical evaluation utilities for ML portfolio projects.
+Reusable ranking metrics toolkit for CTR/RecSys experiments
+Metrics: AUC, LogLoss, Precision@K, Recall@K, NDCG@K
+Focus: lightweight, testable, reproducible offline evaluation
 
-## What this repo does
-- Computes common ranking metrics
-- Supports reproducible offline evaluation
-- Helps compare model outputs consistently
-- Designed as a small portfolio-friendly utility repo
+One-line
 
-## Currently included
-- AUC
-- LogLoss
-- Precision@K
-- Recall@K
-- NDCG@K
+A small Python toolkit for reusable offline ranking evaluation in CTR and recommendation experiments.
 
-## Quickstart
-```bash
-python example.py
-Run tests
-pytest -q
-Example output
-AUC: 1.0
-LogLoss: 0.202737
-Precision@3: 1.0
-Recall@3: 1.0
-NDCG@3: 1.0
-Project structure
-ranking_eval/
-  __init__.py
-  metrics.py
-tests/
-  test_metrics.py
-example.py
 Why this repo matters
 
-Model training is not enough.
-Reliable ML work also needs clear, repeatable evaluation.
+Reusable metric code for ranking / recommendation experiments
 
-This repo is meant to show:
+Lightweight and testable utilities for offline evaluation
 
-evaluation mindset
+Covers both classification-style and ranking-style metrics
 
-ranking metric understanding
+Useful as a companion repo for CTR / RecSys pipelines
 
-reusable ML tooling habit
+Metrics
 
-Roadmap
+AUC
 
- Add MAP
+LogLoss
 
- Add pytest setup
+Precision@K
 
- Add usage examples
+Recall@K
+
+NDCG@K
+
+Intended use
+
+CTR prediction experiments
+
+recommendation ranking experiments
+
+offline model comparison
+
+evaluation utility extraction from larger ML projects
+
+Example direction
+
+from ranking_eval_toolkit import auc, logloss, precision_at_k, recall_at_k, ndcg_at_k
+
+Why it fits this portfolio
+
+This repository widens the story beyond one benchmark:
+
+ctr-seqrec-avazu shows benchmark proof
+
+ctr-api shows serving
+
+ranking-eval-toolkit shows reusable evaluation thinking
