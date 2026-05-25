@@ -1,4 +1,4 @@
-﻿A compact ranking evaluation toolkit for CTR / RecSys portfolio projects, covering AUC, LogLoss, Precision@K, Recall@K, and NDCG@K.
+A compact ranking evaluation toolkit for CTR / RecSys portfolio projects, covering AUC, LogLoss, Precision@K, Recall@K, and NDCG@K.
 
 # ranking-eval-toolkit
 
@@ -52,14 +52,3 @@ Together, the portfolio story is:
 - Precision@K
 - Recall@K
 - NDCG@K
-
-## Suggested Screenshot
-
-Recommended file:
-
-- `docs/eval-output.png`
-
-Add a screenshot later:
-
-- `![Evaluation output](docs/eval-output.png)`
-
