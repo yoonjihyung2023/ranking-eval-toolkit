@@ -37,13 +37,13 @@ This repo demonstrates the **evaluation** part of my Ads/RecSys ML portfolio.
 
 It complements:
 
-- `ctr-seqrec-avazu` ??training / offline benchmark
-- `ctr-api` ??FastAPI / Docker model serving
-- `ranking-eval-toolkit` ??reusable ranking and CTR evaluation metrics
+- `ctr-seqrec-avazu` training / offline benchmark
+- `ctr-api` FastAPI / Docker model serving
+- `ranking-eval-toolkit` reusable ranking and CTR evaluation metrics
 
 Together, the portfolio story is:
 
-- train ??evaluate ??serve
+- train -> evaluate -> serve
 
 ## Metrics Covered
 
@@ -80,4 +80,5 @@ Run the example:
 ```bash
 python example.py
 ```
+
 
