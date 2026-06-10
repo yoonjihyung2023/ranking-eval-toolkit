@@ -30,7 +30,6 @@ Compare offline ranking quality across multiple models
 Evaluate CTR/RecSys experiments with a reusable metric toolkit
 
 Build cleaner experiment reports for portfolio or interview demos
-
 ## Portfolio Role
 
 This repo demonstrates the **evaluation** part of my Ads/RecSys ML portfolio.
@@ -44,7 +43,6 @@ It complements:
 Together, the portfolio story is:
 
 - train -> evaluate -> serve
-
 ## Metrics Covered
 
 - AUC
@@ -80,5 +78,6 @@ Run the example:
 ```bash
 python example.py
 ```
+
 
 
