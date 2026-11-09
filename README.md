@@ -23,6 +23,8 @@ Purpose: reproducible offline evaluation for ranking models
 ```bash
 python example.py
 pytest -q
+```
+
 Example use cases
 
 Compare offline ranking quality across multiple models
@@ -67,10 +69,14 @@ y_true = [1, 0, 1, 0, 1]
 y_score = [0.9, 0.2, 0.8, 0.1, 0.7]
 
 print("AUC:", auc_score(y_true, y_score))
-print("LogLoss:", log_loss_score(y_true, y_score))
-print("Precision@3:", precision_at_k(y_true, y_score, k=3))
-print("Recall@3:", recall_at_k(y_true, y_score, k=3))
-print("NDCG@3:", ndcg_at_k(y_true, y_score, k=3))
+print("LogLoss:", logloss_score(y_true, y_score))
+# Ranking metrics use relevant item IDs and a ranked list of item IDs.
+relevant_items = ["item_1", "item_3", "item_5"]
+ranked_items = ["item_5", "item_1", "item_2", "item_3", "item_4"]
+
+print("Precision@3:", precision_at_k(relevant_items, ranked_items, k=3))
+print("Recall@3:", recall_at_k(relevant_items, ranked_items, k=3))
+print("NDCG@3:", ndcg_at_k(relevant_items, ranked_items, k=3))
 ```
 
 Run the example:
