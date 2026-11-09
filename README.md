@@ -57,7 +57,7 @@ Together, the portfolio story is:
 ```python
 from ranking_eval_toolkit import (
     auc_score,
-    log_loss_score,
+    logloss_score,
     precision_at_k,
     recall_at_k,
     ndcg_at_k,
@@ -78,6 +78,3 @@ Run the example:
 ```bash
 python example.py
 ```
-
-
-
